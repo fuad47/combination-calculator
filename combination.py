@@ -33,9 +33,10 @@ def result():
     # st.text(result)
     # st.write(str(result))
     st.subheader('Total combinations: '+ str(combin))
-    st.subheader('Total investment: '+ str(round(invtotal,2)))
-    st.subheader('Total profit combination: '+ str(round(result,2)))
-    st.subheader('Net profit combination: '+ str(round(profit,2)))
+    st.subheader('Total investment (C): '+ str(round(invtotal,2)))
+    st.subheader('Total profit (C): '+ str(round(result,2)))
+    st.subheader('Net profit (C): '+ str(round(profit,2)))
+    st.subheader('Total investment single : '+ str(round(invest*n,2)))
     st.subheader('Total profit single: '+ str(round(resultsingle,2)))
     st.subheader('Net profit single: '+ str(round(profitsingle,2)))
     return result,profit
