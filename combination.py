@@ -28,7 +28,7 @@ wrongcombination=combin-corcombination
 def result():
     result=corcombination*invest*coefavg*r
     profit=result-invtotal
-    resultsingle=invest*corcombination*coefavg
+    resultsingle=invest*preds*coefavg
     profitsingle=resultsingle-invest*n
     combin=comb(n,r)
     # st.text(result)
