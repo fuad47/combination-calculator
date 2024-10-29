@@ -27,13 +27,17 @@ wrongcombination=combin-corcombination
 def result():
     result=corcombination*invest*coefavg*r
     profit=result-invtotal
+    resultsingle=invest*corcombination*coefavg
+    profitsingle=resultsingle-invest*n
     combin=comb(n,r)
     # st.text(result)
     # st.write(str(result))
     st.subheader('Total combinations: '+ str(combin))
     st.subheader('Total investment: '+ str(round(invtotal,2)))
-    st.subheader('Total profit: '+ str(round(result,2)))
-    st.subheader('Net profit: '+ str(round(profit,2)))
+    st.subheader('Total profit combination: '+ str(round(result,2)))
+    st.subheader('Net profit combination: '+ str(round(profit,2)))
+    st.subheader('Total profit single: '+ str(round(resultsingle,2)))
+    st.subheader('Net profit single: '+ str(round(profitsingle,2)))
     return result,profit
 
 
