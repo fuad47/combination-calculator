@@ -15,7 +15,7 @@ r=int(st.number_input('Size of group',value=1,min_value=1))
 invest=st.number_input('Investment per group',value=1.0,min_value=0.0,step=0.1)
 
 preds=int(st.number_input('Number of correct predictions',value=1,max_value=n,))
-coefavg=st.number_input('Average coefficient',value=1.0,step=0.1)
+coefavg=st.number_input('Coefficient',value=1.0,step=0.1)
 # coefavg=st.slider('Average coefficient', min_value=1.0,max_value=20.0)
 # print(n,r)
 combin=comb(n,r)
