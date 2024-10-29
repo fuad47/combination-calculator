@@ -32,7 +32,7 @@ def result():
     combin=comb(n,r)
     # st.text(result)
     # st.write(str(result))
-    st.subheader('Total combinations: '+ str(combin))
+    st.subheader('Combinations: '+ str(combin))
     st.subheader('Total investment (C): '+ str(round(invtotal,2)))
     st.subheader('Total profit (C): '+ str(round(result,2)))
     st.subheader('Net profit (C): '+ str(round(profit,2)))
