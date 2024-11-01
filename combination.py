@@ -1,6 +1,10 @@
 import streamlit as st
 from math import comb
 
+st.set_page_config(
+    page_title="Ex-stream-ly Cool App",
+    page_icon="🧊",
+    layout="wide",)
 st.header ("Calculate profit on combinations")
 
 # Initialize session state variables for dynamic updates
@@ -81,6 +85,7 @@ with col1:
             coefavg=st.number_input('Coefficient',value=st.session_state['coefavg'],min_value=1.0,step=0.2)
         with col23:
             coef17=st.button('1.7',on_click=update_coef,args=[1.7],use_container_width=True,)
+            
         with col24:
             coef3=st.button('3.0',on_click=update_coef,args=[3.0],use_container_width=True,)
         with col25:
@@ -89,7 +94,8 @@ with col1:
         
 # coefavg=st.slider('Average coefficient', min_value=1.0,max_value=20.0)
 # print(n,r)
-
+st.sidebar.write("This lives in the sidebar")
+st.sidebar.button("Click me!")
 
 def result():
     combin=comb(n,r)
@@ -104,12 +110,25 @@ def result():
     # st.text(result)
     # st.write(str(result))
     # col2.write('smth')
+
     col4.subheader('Combinations (C): '+ str(combin))
     col4.subheader('Total investment: '+ str(round(invtotal,2)))
     col4.subheader('Total profit (C): '+ str(round(result,2)))
     col4.subheader('Net profit (C): '+ str(round(profit,2)),divider="gray")
     col4.subheader('Total profit single: '+ str(round(resultsingle,2)))
     col4.subheader('Net profit single: '+ str(round(profitsingle,2)),divider="gray")
+
+    st.sidebar.subheader('Combinations (C): '+ str(combin))
+    st.sidebar.subheader('Total investment: '+ str(round(invtotal,2)))
+    st.sidebar.subheader('Total profit (C): '+ str(round(result,2)))
+    st.sidebar.subheader('Net profit (C): '+ str(round(profit,2)),divider="gray")
+    st.sidebar.subheader('Total profit single: '+ str(round(resultsingle,2)))
+    st.sidebar.subheader('Net profit single: '+ str(round(profitsingle,2)),divider="gray")
+
     return result,profit
 
 result_value = result()
+
+
+
+ 
