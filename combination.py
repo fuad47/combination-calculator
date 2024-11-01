@@ -94,8 +94,6 @@ with col1:
         
 # coefavg=st.slider('Average coefficient', min_value=1.0,max_value=20.0)
 # print(n,r)
-st.sidebar.write("This lives in the sidebar")
-st.sidebar.button("Click me!")
 
 def result():
     combin=comb(n,r)
