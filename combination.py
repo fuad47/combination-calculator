@@ -125,7 +125,38 @@ def result():
 
     return result,profit
 
+def send_feedback():
+    # send telegram message:
+    api_key=st.secrets["api_key"]
+    my_user_id=st.secrets["my_user_id"]
+    params={'chat_id':my_user_id,'text':f'{comments} \n {selected} star(s) '}
+    requests.get("https://api.telegram.org/bot{}/sendMessage".format(api_key), params=params)
+
+
 result_value = result()
+
+with st.sidebar.expander("Send review"):
+
+
+    with st.form("my_form",clear_on_submit=True):
+            
+            # st.write("Send your comment")
+            comments = st.text_area('Write your comment')
+
+            sentiment_mapping = ["one", "two", "three", "four", "five"]
+            selected = st.feedback("stars")
+            if selected is not None:
+                st.markdown(f"Thanks!")
+                
+            else:
+                selected=3
+                st.markdown(f"Thanks for your comments!")
+                # sentiment_mapping[selected]='no star'
+            selected=selected
+        
+
+            submitted = st.form_submit_button("Submit",on_click=send_feedback)
+
 
 
 
