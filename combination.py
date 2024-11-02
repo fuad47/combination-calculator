@@ -11,7 +11,7 @@ st.header ("Calculate profit on combinations")
 for i in st.secrets.items():
     st.write(i)
 
-print('hi')
+st.write('hi')
 # Initialize session state variables for dynamic updates
 if 'n' not in st.session_state:
     st.session_state['n'] = 1
