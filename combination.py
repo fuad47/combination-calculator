@@ -162,6 +162,7 @@ with st.sidebar.expander("Send review"):
 
             submitted = st.form_submit_button("Submit",on_click=send_feedback)
 
+st.sidebar.write('This can be a useful calculation tool for various cases')
 
 
 
