@@ -164,6 +164,8 @@ with st.sidebar.expander("Send review"):
 
 st.sidebar.write('This can be a useful calculation tool for various cases')
 
+st.sidebar.write ('<a href=https://kofe.al/en/@fuad47>You can buy me a coffee ;)</a>',unsafe_allow_html=True)
+
 
 
  
