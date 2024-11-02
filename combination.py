@@ -9,7 +9,7 @@ st.header ("Calculate profit on combinations")
 
 
 for i in st.secrets.items():
-    print(i)
+    st.write(i)
 
 print('hi')
 # Initialize session state variables for dynamic updates
